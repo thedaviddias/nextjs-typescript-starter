@@ -2,6 +2,12 @@
   "extends": "@thedaviddias/tsconfig/nextjs.json",
   "compilerOptions": {
     "preserveSymlinks": true,
+    "types": [
+      "jest",
+      "node",
+      "@types/jest",
+      "@types/testing-library__jest-dom"
+    ],
     "plugins": [
       {
         "name": "next"
@@ -18,7 +24,7 @@
     }
   },
   "include": [
-    "types/global.d.ts",
+    "@types/global.d.ts",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",

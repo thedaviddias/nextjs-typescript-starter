@@ -20,6 +20,8 @@ const config = withPlausibleProxy()({
     unoptimized: true,
   },
   i18n: i18nConfig.i18n,
+  // already tested throught workflows
+  ignoreDuringBuilds: true,
 })
 
 const nextConfig = withBundleAnalyzer({

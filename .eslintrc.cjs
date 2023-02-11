@@ -10,5 +10,6 @@ module.exports = {
     'no-console': ['error'],
     'react/jsx-no-undef': ['off', { allowGlobals: true }],
     '@typescript-eslint/no-unused-vars': ['error'],
+    '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: false }],
   },
 }

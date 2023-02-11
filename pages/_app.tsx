@@ -17,4 +17,4 @@ function App(props: AppProps<DefaultPageProps> & { pageProps: DefaultPageProps }
   )
 }
 
-export default appWithTranslation<AppProps & { pageProps: DefaultPageProps }>(App)
+export default appWithTranslation(App)

@@ -1,4 +1,7 @@
-export default function Home() {
+import { GetStaticPropsContext, NextPage } from 'next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+
+const Home: NextPage = () => {
   return (
     <main>
       <div className="md:flex">
@@ -10,4 +13,14 @@ export default function Home() {
       </div>
     </main>
   )
+}
+
+export default Home
+
+export const getStaticProps = async (context: GetStaticPropsContext) => {
+  const locale = context.locale || context.defaultLocale || 'en'
+
+  const translations = await serverSideTranslations(locale, ['common'])
+
+  return { props: { ...translations } }
 }

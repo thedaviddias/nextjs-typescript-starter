@@ -6,6 +6,7 @@ const DEFAULT_LOCALE = process.env.DEFAULT_LOCALE || 'en'
  * @type {import("next/dist/server/config-shared").I18NConfig}
  */
 const config = {
+  debug: process.env.NODE_ENV === 'development',
   i18n: {
     defaultLocale: DEFAULT_LOCALE,
     locales: [DEFAULT_LOCALE],
