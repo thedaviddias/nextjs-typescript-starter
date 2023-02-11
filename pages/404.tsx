@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
-import { useEffect } from 'react'
 import { usePlausible } from 'next-plausible'
+import { useEffect } from 'react'
 
 const NotFoundPage: NextPage = () => {
   const router = useRouter()
@@ -13,10 +13,12 @@ const NotFoundPage: NextPage = () => {
     })
   }, [plausible])
 
+  const handleClick = () => router.push('/')
+
   return (
     <div>
       <div className="mt-10 text-center">
-        <button onClick={() => router.push('/')}>Back home</button>
+        <button onClick={handleClick}>Back home</button>
       </div>
     </div>
   )
