@@ -1,9 +1,15 @@
-import { AppProps } from 'next/app';
+import '@/styles/globals.css'
+
+import { AppProps } from 'next/app'
+import { appWithTranslation, SSRConfig } from 'next-i18next'
 import PlausibleProvider from 'next-plausible'
 
-import '@/styles/globals.css';
+type DefaultPageProps = SSRConfig
 
-function App({ Component, pageProps }: AppProps) {
+function App(props: AppProps<DefaultPageProps> & { pageProps: DefaultPageProps }) {
+  const { Component } = props
+  const pageProps = props.pageProps
+
   return (
     <PlausibleProvider domain="example.com">
       <Component {...pageProps} />;
@@ -11,4 +17,4 @@ function App({ Component, pageProps }: AppProps) {
   )
 }
 
-export default App;
+export default appWithTranslation<AppProps & { pageProps: DefaultPageProps }>(App)

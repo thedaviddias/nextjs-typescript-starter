@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
-import { useEffect } from 'react'
 import { usePlausible } from 'next-plausible'
+import { useEffect } from 'react'
 
 const NotFoundPage: NextPage = () => {
   const router = useRouter()
