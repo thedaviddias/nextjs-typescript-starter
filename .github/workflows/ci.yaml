@@ -32,7 +32,7 @@ jobs:
           node-version: '${{ steps.nvmrc.outputs.NODE_VERSION }}'
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v2.2.2
+        uses: pnpm/action-setup@v2.2.4
         id: pnpm-install
         with:
           version: 7
@@ -83,7 +83,7 @@ jobs:
           node-version: '${{ steps.nvmrc.outputs.NODE_VERSION }}'
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v2.2.2
+        uses: pnpm/action-setup@v2.2.4
         id: pnpm-install
         with:
           version: 7
@@ -135,7 +135,7 @@ jobs:
           node-version: '${{ steps.nvmrc.outputs.NODE_VERSION }}'
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v2.2.2
+        uses: pnpm/action-setup@v2.2.4
         id: pnpm-install
         with:
           version: 7
@@ -187,7 +187,7 @@ jobs:
           node-version: '${{ steps.nvmrc.outputs.NODE_VERSION }}'
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v2.2.2
+        uses: pnpm/action-setup@v2.2.4
         id: pnpm-install
         with:
           version: 7
